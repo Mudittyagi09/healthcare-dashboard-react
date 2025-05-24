@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './DashboardMainContent.module.css';
-import DashboardOverview from '../DashboardOverView/DashboardOverView';
+import DashboardOverview from '../DashboardOverview/DashboardOverview';
 import CalendarView from '../CalendarView/CalendarView';
 import UpcomingSchedule from '../UpcomingSchedule/UpcomingSchedule';
 import ActivityFeed from '../ActivityFeed/ActivityFeed';
