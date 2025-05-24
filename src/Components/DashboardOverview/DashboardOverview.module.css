@@ -1,0 +1,34 @@
+.dashboardOverview {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Anatomy and HealthStatusCards side-by-side */
+    gap: 20px;
+    align-items: flex-start; /* Align content to the top */
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .content {
+        grid-template-columns: 1fr; /* Stack anatomy and health cards */
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboardOverview {
+        padding: 15px; /* Adjust padding */
+    }
+    .title {
+        font-size: 1.1rem;
+    }
+}

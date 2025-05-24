@@ -1,0 +1,102 @@
+.card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    box-shadow: var(--shadow-soft);
+    padding: 20px;
+}
+
+.button {
+    background-color: var(--blue-main);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.input {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    width: 100%;
+}
+
+.iconButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.statusIndicator {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.statusHealthy {
+    background-color: #e6ffee;
+    color: var(--healthy-green);
+}
+
+.statusUnhealthy {
+    background-color: #ffe6e6;
+    color: var(--unhealthy-red);
+}
+
+.statusNormal {
+    background-color: #e6f7ff;
+    color: var(--normal-blue);
+}
+
+.statusComplete {
+    background-color: #e6ffee;
+    color: var(--healthy-green);
+}
+
+.statusPending {
+    background-color: #fff7e6;
+    color: var(--orange-accent);
+}
+
+/* Flexbox utilities */
+.flexRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.flexCol {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.spaceBetween {
+    justify-content: space-between;
+}
+
+.alignCenter {
+    align-items: center;
+}
+
+/* Grid utilities */
+.grid {
+    display: grid;
+    gap: 20px;
+}

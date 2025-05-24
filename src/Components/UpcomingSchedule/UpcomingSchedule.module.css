@@ -1,0 +1,52 @@
+.upcomingSchedule {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-grow: 1; /* Allow this component to fill available space */
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.scheduleContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.daySection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.dayTitle {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.appointmentsList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid for cards */
+    gap: 15px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .upcomingSchedule {
+        padding: 15px;
+    }
+    .title {
+        font-size: 1rem;
+    }
+    .dayTitle {
+        font-size: 0.9rem;
+    }
+    .appointmentsList {
+        grid-template-columns: 1fr; /* Stack cards on very small screens */
+    }
+}

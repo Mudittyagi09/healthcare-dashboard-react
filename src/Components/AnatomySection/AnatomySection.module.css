@@ -1,0 +1,111 @@
+.anatomySection {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-height: 400px; /* Ensure sufficient height */
+    position: relative; /* For absolute positioning of indicators */
+}
+
+.imageContainer {
+    position: relative;
+    width: 100%;
+    max-width: 250px; /* Adjust based on image aspect ratio */
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allow image container to take available space */
+}
+
+.humanBodyImage {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 350px; /* Control image size */
+}
+
+.indicator {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.indicatorDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.indicatorText {
+    color: var(--text-primary);
+    font-size: 0.75rem;
+}
+
+/* Status specific styles */
+.indicator.healthy {
+    background-color: #e6ffee;
+    color: var(--healthy-green);
+    border: 1px solid var(--healthy-green);
+}
+.indicator.healthy .indicatorDot {
+    background-color: var(--healthy-green);
+}
+
+/* You might need to add other status styles (e.g., unhealthy, normal) if your data changes */
+
+.activityInfo {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: auto; /* Push to bottom */
+}
+
+.activityItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.activityIcon {
+    font-size: 1.2rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .anatomySection {
+        min-height: auto;
+        padding: 15px;
+    }
+    .humanBodyImage {
+        max-height: 250px;
+    }
+    .indicator {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+    .indicatorDot {
+        width: 8px;
+        height: 8px;
+    }
+    .activityItem {
+        font-size: 0.85rem;
+    }
+    .activityIcon {
+        font-size: 1rem;
+    }
+}

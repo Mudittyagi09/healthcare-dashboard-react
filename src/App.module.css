@@ -1,0 +1,35 @@
+.appContainer {
+    display: flex;
+    width: 100%;
+    background-color: var(--bg-light);
+}
+
+.mainContentArea {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px; /* Adjust padding as per design */
+    gap: 25px;
+    max-height: 100vh;
+    overflow-y: auto; /* Allow scrolling for main content */
+    width: calc(100% - 250px); /* Adjust based on sidebar width */
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .mainContentArea {
+        padding: 15px;
+        width: 100%; /* Take full width when sidebar is hidden/collapsed */
+    }
+}
+
+@media (max-width: 768px) {
+    .appContainer {
+        flex-direction: column;
+    }
+
+    .mainContentArea {
+        padding: 10px;
+        width: 100%;
+    }
+}

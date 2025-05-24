@@ -1,0 +1,34 @@
+.dashboardMainContent {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    flex-grow: 1;
+}
+
+.topSection {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr; /* Adjust ratios as needed */
+    gap: 25px;
+}
+
+.bottomSection {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Adjust ratios as needed */
+    gap: 25px;
+    flex-grow: 1; /* Allow bottom section to grow and fill space */
+}
+
+/* Responsiveness */
+@media (max-width: 1200px) {
+    .topSection,
+    .bottomSection {
+        grid-template-columns: 1fr; /* Stack columns on smaller desktops/tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .topSection,
+    .bottomSection {
+        gap: 15px; /* Reduce gap on mobile */
+    }
+}

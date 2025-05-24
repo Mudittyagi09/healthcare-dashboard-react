@@ -1,0 +1,75 @@
+.activityFeed {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 200px; /* Ensure chart has space */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.appointmentsCount {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.chartContainer {
+    display: flex;
+    align-items: flex-end; /* Bars start from bottom */
+    justify-content: space-around;
+    height: 120px; /* Fixed height for the chart area */
+    border-bottom: 1px solid var(--border-color); /* Bottom line for the chart */
+    padding-bottom: 5px; /* Space for day labels */
+}
+
+.barWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+}
+
+.bar {
+    width: 15px; /* Width of the bars */
+    background-color: var(--blue-main);
+    border-radius: 3px 3px 0 0;
+    transition: height 0.3s ease-out;
+}
+
+.barDay {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    margin-top: 5px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .activityFeed {
+        padding: 15px;
+    }
+    .title {
+        font-size: 1rem;
+    }
+    .appointmentsCount {
+        font-size: 0.8rem;
+    }
+    .chartContainer {
+        height: 100px;
+    }
+    .bar {
+        width: 12px;
+    }
+    .barDay {
+        font-size: 0.7rem;
+    }
+}

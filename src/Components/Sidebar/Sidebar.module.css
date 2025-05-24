@@ -1,0 +1,131 @@
+.sidebar {
+    width: 250px; /* Fixed width as per design */
+    background-color: var(--sidebar-bg);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: var(--shadow-soft);
+    position: sticky; /* Keeps sidebar in place */
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Allow scrolling if content exceeds height */
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.sectionTitle {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    color: var(--sidebar-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navItem:hover {
+    background-color: var(--sidebar-active-bg);
+    color: var(--sidebar-active-text);
+}
+
+.navItem.active {
+    background-color: var(--sidebar-active-bg);
+    color: var(--sidebar-active-text);
+}
+
+.icon {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px; /* Standardize icon size */
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 70px; /* Collapse sidebar */
+        padding: 20px 10px;
+        align-items: center;
+    }
+
+    .sectionTitle,
+    .navItem span:not(.icon) {
+        display: none; /* Hide text, keep icons */
+    }
+
+    .navItem {
+        justify-content: center;
+        gap: 0;
+        padding: 12px 0;
+        width: 100%;
+    }
+
+    .icon {
+        font-size: 1.5rem; /* Make icons slightly larger */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Full width at top */
+        height: auto; /* Auto height for navigation bar */
+        flex-direction: row; /* Horizontal layout for mobile nav */
+        justify-content: space-around;
+        padding: 10px 0;
+        overflow-x: auto; /* Allow horizontal scrolling if many items */
+        position: static; /* No sticky on mobile */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .section {
+        margin-bottom: 0;
+    }
+
+    .navigation ul {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .navItem {
+        padding: 8px 5px;
+        margin-bottom: 0;
+        flex-direction: column; /* Stack icon and text for mobile */
+        font-size: 0.7rem;
+    }
+
+    .navItem span:not(.icon) {
+        display: block; /* Show text again, but smaller */
+        font-size: 0.7rem;
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+
+    .icon {
+        font-size: 1.1rem;
+    }
+}

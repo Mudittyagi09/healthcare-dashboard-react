@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Color Palette */
+    --bg-light: #f7f7f7; /* Overall background */
+    --bg-card: #ffffff;  /* Background for cards/containers */
+    --text-primary: #333333; /* Dark text for headings/main content */
+    --text-secondary: #777777; /* Lighter text for descriptions */
+    --text-light: #aaaaaa;   /* Very light text, e.g., for disabled states */
+    --blue-main: #5a7dff;    /* Primary accent blue */
+    --blue-light: #e0eaff;   /* Lighter blue for backgrounds/highlights */
+    --sidebar-bg: #ffffff;   /* Sidebar background */
+    --sidebar-text: #777777; /* Sidebar link text */
+    --sidebar-active-bg: #eef2ff; /* Sidebar active link background */
+    --sidebar-active-text: #5a7dff; /* Sidebar active link text */
+    --border-color: #eeeeee; /* Light border color */
+    --shadow-soft: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for cards */
+
+    /* Status Colors */
+    --healthy-green: #2ecc71;  /* Green for healthy status */
+    --unhealthy-red: #e74c3c;  /* Red for unhealthy status */
+    --normal-blue: #3498db;    /* Blue for normal status */
+    --orange-accent: #f39c12; /* Orange for pending/warning */
+}
+
+/* Global Resets and Base Styles */
+* {
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin: 0;             /* Remove default margins */
+    padding: 0;            /* Remove default paddings */
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Use Poppins as primary font */
+    background-color: var(--bg-light);  /* Apply global light background */
+    color: var(--text-primary);         /* Apply primary text color */
+    line-height: 1.6;                   /* Standard line height for readability */
+    -webkit-font-smoothing: antialiased; /* Better font rendering for macOS/iOS */
+    -moz-osx-font-smoothing: grayscale; /* Better font rendering for Firefox */
+}
+
+#root {
+    display: flex;         /* Use flexbox for the main app layout */
+    min-height: 100vh;     /* Ensure the app takes full viewport height */
+    overflow: hidden;      /* Prevents horizontal scroll from main layout */
+}
